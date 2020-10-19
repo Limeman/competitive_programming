@@ -1,5 +1,5 @@
 # 38. Count and Say
-
+https://leetcode.com/problems/count-and-say/
 The count-and-say sequence is the sequence of integers with the first five terms as following:
 
 ```
