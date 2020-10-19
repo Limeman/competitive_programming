@@ -1,4 +1,4 @@
-# 38. Count and Say
+# 38. Count and Say [acceptance rate 0.45]
 https://leetcode.com/problems/count-and-say/
 
 The count-and-say sequence is the sequence of integers with the first five terms as following:
