@@ -1,4 +1,5 @@
 # Succession
+https://open.kattis.com/problems/succession
 
 The king in Utopia has died without an heir. Now several nobles in the country claim the throne. The country law states that if the ruler has no heir, the person who is most related to the founder of the country should rule.
 
@@ -53,7 +54,6 @@ henrii edwardii roxane
 charlesii elizabeth henrii
 charlesii
 matthew
-
 ```
 
 **Sample Output 2**
