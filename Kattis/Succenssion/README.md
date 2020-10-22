@@ -19,7 +19,7 @@ A single line containing the name of the claimant with most blood from the found
 
 *The family relations may not be realistic when considering sex, age etc. However, every child will have two unique parents and no one will be a descendent from themselves. No one will be listed as a child twice.*
 
-**Sample Input 1**
+## Sample Input 1
 ```
 4 5
 andrew
@@ -34,12 +34,12 @@ flora
 gloria
 ```
 
-**Sample Output 1**
+## Sample Output 1
 ```
 elena
 ```
 
-**Sample Input 2**
+## Sample Input 2
 ```
 9 2
 edwardi
@@ -56,7 +56,7 @@ charlesii
 matthew
 ```
 
-**Sample Output 2**
+## Sample Output 2
 ```
 matthew
 ```
