@@ -18,17 +18,27 @@ A single line containing the name of the claimant with most blood from the found
 
 *The family relations may not be realistic when considering sex, age etc. However, every child will have two unique parents and no one will be a descendent from themselves. No one will be listed as a child twice.*
 
-| **Sample Input 1** | **Sample Output 1** |
-| ```4 5
-andrew
-betsy andrew flora
-carol andrew betsy
-dora andrew carol
-elena andrew dora
-carol
-dora
-elena
-flora
-gloria
-``` 
-| ```elena```
+<div>
+    <p align='left'>
+    <b>Sample Input 1</b>
+    ```
+    4 5
+    andrew
+    betsy andrew flora
+    carol andrew betsy
+    dora andrew carol
+    elena andrew dora
+    carol
+    dora
+    elena
+    flora
+    gloria
+    ```
+    </p>
+    <p align='left'>
+    <b>Sample Output 1</b>
+    ```
+    elena
+    ```
+    </p>
+</div>
