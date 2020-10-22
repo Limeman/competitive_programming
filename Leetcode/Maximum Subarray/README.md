@@ -37,5 +37,5 @@ Output: -2147483647
 ```
 
 ## Constraints:
-* `1 <= nums.length <= 2 * 104`
-* `-231 <= nums[i] <= 231 - 1`
+* `1 <= nums.length <= 2 * 10^4`
+* `-2^31 <= nums[i] <= 2^31 - 1`
