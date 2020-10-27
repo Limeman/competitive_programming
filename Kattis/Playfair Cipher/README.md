@@ -6,7 +6,7 @@ The Playfair cipher is a manual symmetric encryption technique and was the first
 The Playfair cipher uses a 5
 by 5 table containing each letter in the English alphabet exactly once (except ‘Q’ which is missing). The table constitutes the encryption key. To more easily remember the table, it is typically generated from a key phrase. First fill in the spaces in an empty table with the letters of the key phrase (dropping spaces and duplicate letters), then fill the remaining spaces with the rest of the letters of the alphabet in order. The key phrase is written in the top rows of the table, from left to right. For instance, if the key phrase is “playfair example”, the encryption key becomes
 
-![](fig.png)
+![](fig.PNG)
 
 To encrypt a message, one would remove all spaces and then break the message into digraphs (groups of 2 letters) such that, for example, “Hello World” becomes “HE LL OW OR LD”. Then map them out on the key table, and apply the rule below that matches the letter combination:
 * If both letters are the same (or only one letter is left), add an ‘X’ after the first letter. Encrypt the new pair and continue (note that this changes all the remaining digraphs).
