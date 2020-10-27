@@ -1,4 +1,16 @@
-<div style="width:40.00%" class="illustration">
+
+                    
+                    
+
+<div class="problem-wrapper" data-copied-to-clipboard-text="Copied!">
+
+    <div class="problem-headline clearfix">
+        <div class="headline-wrapper"><h1>Soda Slurper</h1></div>
+    </div>
+
+            
+  <div class="problembody">
+    <div style="width:40.00%" class="illustration">
       <img src="/problems/sodaslurper/file/statement/en/img-0001.jpg" alt="/problems/sodaslurper/file/statement/en/img-0001.jpg" class="illustration">
       <div class="description"></div>
     </div>
@@ -50,4 +62,10 @@
         </td>
       </tr>
     </tbody></table>
-  
+  </div>
+
+    
+</div>
+
+
+                
