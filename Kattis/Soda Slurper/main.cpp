@@ -1,7 +1,7 @@
 #include<iostream>
 
 int main() {
-    int e, f, c, num_bottles, remainder, count = 0;
+    int e, f, c, num_bottles, count = 0;
     std::cin >> e >> f >> c;
     num_bottles = e + f;
     while (num_bottles >= c) {
