@@ -77,7 +77,7 @@ int main() {
             pair += message[i];
             pair += "x";
             ret_val += encrypt_pair(pair, index, table);
-            ++i;
+            i = j;
             ++j;
         }
         else {
