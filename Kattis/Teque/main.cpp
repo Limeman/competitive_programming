@@ -1,59 +1,113 @@
-#include<iostream>
+#include<cstdio>
 
 class teque {
     public:
-        teque():head(nullptr), stomach(nullptr), tail(nullptr) {}
-        teque(const teque& arg) {
-            this->head = arg.head;
-            this->stomach = arg.stomach;
-            this->tail = arg.tail;
+    teque(): head(nullptr), tail(nullptr), stomach(nullptr) {}
+
+    void push_back(int x) {
+        node* tmp = new node(x);
+        if (head == nullptr) {
+            head = tmp;
+            stomach = tmp;
+            tail = tmp;
         }
-        teque& operator= (const teque& arg) {
-            node* tmp;
-            while (this->head != nullptr) {
-                tmp = this->head;
-                this->head = this->head->next;
-                tmp->next = nullptr;
-                delete tmp;
-            }
-            tmp = arg.head;
-            while (tmp->next != nullptr) {
-                if (tmp == arg.head) {
-                    this->head = new node(tmp->val);
-                    this->tail = this->head;
-                }
-                else {
-                    
-                }
-                tmp = tmp->next;
-            }
+        else {
+            tmp->prev = this->tail;
+            this->tail->next = tmp;
+            this->tail = tmp;
         }
+    }
+    void push_front(int x) {
+        node* tmp = new node(x);
+        if (head == nullptr) {
+            head = tmp;
+            stomach = tmp;
+            tail = tmp;
+        }
+        else {
+            tmp->next = head;
+            head->prev = tmp;
+            head = tmp;
+        }
+    }
+    void push_mid(int x) {
+        node* tmp = new node(x);
+        if (head == nullptr) {
+            head = tmp;
+            stomach = tmp;
+            tail = tmp;
+        }
+        else if (head == tail) {
+            push_back(x);
+        }
+        else if (stomach == tail) {
+            tmp->prev = head;
+            tmp->next = tail;
+            head->next = tmp;
+            tail->prev = tmp;
+            stomach = tmp;
+        }
+        else {
+            tmp->prev = stomach;
+            tmp->next = stomach->next;
+            stomach->next = tmp;
+            stomach->next->prev = tmp;
+            stomach = tmp;
+        }
+    }
+    int get(int i) {
+        node* curr = head;
+        while (i--) {
+            //printf("%d\n", i);
+            curr = curr->next;
+        }
+        return curr->val;
+    }
+
+    void print() {
+        node* curr = head;
+        while (curr != nullptr) {
+            printf("%d\n", curr->val);
+            curr = curr->next;
+        }
+        printf("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
+    }
+
     private:
-        struct node {
-            node(int val):val(val), next(nullptr), prev(nullptr) {}
-            node(int val, node* next): val(val), next(next), prev(nullptr) {}
-            node(const node&arg) {
-                this->val = arg.val;
-                this->next = arg.next;
-                this->prev = arg.prev;
-            }
-            node& operator = (const node &arg) {
-                this->val = arg.val;
-                this->next = arg.next;
-                this->prev = arg.prev;
-                return *this;
-            }
-            ~node() {}
-            int val;
-            node* prev;
-            node* next;
-        };
-        node* head;
-        node* stomach;
-        node* tail;
+    struct node {
+        node(int x): val(x), next(nullptr), prev(nullptr) {}
+
+        node* next;
+        node* prev;
+        int val;
+    };
+    node* head;
+    node* tail;
+    node* stomach;
 };
 
 int main() {
-    teque t;
+    teque vals;
+    int val, n;
+    char command[12];
+
+    scanf("%d", &n);
+    
+    for (int i = 0; i < n; ++i) {
+        scanf("%s %d", command, &val);
+        if (command[0] == 'g') {
+            printf("%d\n", vals.get(val));
+        }
+        else if (command[5] == 'b') {
+            vals.push_back(val);
+        }
+        else if (command[5] == 'f') {
+            vals.push_front(val);
+        }
+        else {
+            vals.push_mid(val);
+        }
+        //vals.print();
+    }
     return 0;
 }
